@@ -501,7 +501,7 @@ instance : DiscreteTopology (classLattice g ⊥ Q) := by
   have h_compact : IsCompact (f '' K ×ˢ {x : n → 𝔸f E | ∀ i : n, x i ∈ Ô E}) :=
     (hK.prod (isCompact_pi_infinite fun _ : n ↦ isCompact_Ô)).image_of_continuous _
   refine isCovolOneLattice_ratVectors.finite_preimage h_compact
-    |>.image (fun y : n → E ↦ Q (toRealVectors y)) |>.preimage injOn_subtype_val |>.subset ?_
+    |>.image (fun y : n → E ↦ Q (toRealVectors y)) |>.preimage injOn_subtypeVal |>.subset ?_
   rintro ⟨_, y, hy, rfl⟩ hy_mem
   -- `y` comes from the pair `(Q y, g⁻¹ y)` of the compact set, since `g⁻¹ y` is integral.
   have h_image : f (Q (toRealVectors y), frameCoords g y) =

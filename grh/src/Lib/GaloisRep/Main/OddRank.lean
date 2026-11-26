@@ -160,7 +160,7 @@ lemma IsWeakBaseChange.attached_comp_stepKerInclusion
     exact Normal.map inferInstance _ (stepField χ).fixingSubgroupEquiv.surjective
   have h_nondeg : IsTraceNondeg (r'.comp (stepKerInclusion χ)) :=
     hr'.isTraceNondeg.comp (stepKerInclusion χ) h_normal
-  refine ⟨hr'.continuous.comp h_cont, h_nondeg, (isOpen_stepKer χ).isOpenMap_subtype_val,
+  refine ⟨hr'.continuous.comp h_cont, h_nondeg, (isOpen_stepKer χ).isOpenMap_subtypeVal,
     fun η hη ↦ ?_⟩
   -- At most Frobenius data of `L`, `f'` has the polynomial given by `P'`.
   have h_most' : ∀ᶠ y : FrobeniusDatum (stepField χ) in mostFrobenii (stepField χ),

@@ -146,7 +146,7 @@ lemma exists_isCompact_isOpen_preimage_eq {G : Type} [Group G] [TopologicalSpace
     [NonarchimedeanGroup G] [T2Space G] [WeaklyLocallyCompactSpace G] {C : Set G} (hC : IsClosed C)
     {A : Set C} (hA_open : IsOpen A) (hA_compact : IsCompact A) :
     ∃ V : Set G, IsOpen V ∧ IsCompact V ∧ ∀ x : C, (x : G) ∈ V ↔ x ∈ A := by
-  have h_rest : IsClosed (Subtype.val '' Aᶜ) := hC.isClosedMap_subtype_val _ hA_open.isClosed_compl
+  have h_rest : IsClosed (Subtype.val '' Aᶜ) := hC.isClosedMap_subtypeVal _ hA_open.isClosed_compl
   have h_disjoint : Disjoint (Subtype.val '' A) (Subtype.val '' Aᶜ) :=
     disjoint_image_of_injective Subtype.val_injective disjoint_compl_right
   obtain ⟨V, hV_open, hV_compact, h_subset_V, hV_subset⟩ :=

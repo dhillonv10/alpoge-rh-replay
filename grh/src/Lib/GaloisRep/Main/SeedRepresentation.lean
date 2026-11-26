@@ -298,7 +298,7 @@ private lemma New.GaloisRep.card_eq_and_eventually_charpoly_eq_of_hasNoSmallRela
   have h_near : ∀ᶠ g : decompGroup Gal(Ω/E) A in nearOne (decompGroup Gal(Ω/E) A),
       G.aeval (T⁻¹.val * (r g).val.map (algebraMap (PadicAlgCl ℓ) ℂ_[ℓ])).uncurry = 0 := by
     rw [nearOne_eq_nhds_one hj_open]
-    exact continuousAt_subtype_val (x := (1 : decompGroup Gal(Ω/E) A)) hG
+    exact continuousAt_subtypeVal (x := (1 : decompGroup Gal(Ω/E) A)) hG
   have h_twisted : ∀ᶠ g : decompGroup Gal(Ω/E) A in nearOne (decompGroup Gal(Ω/E) A),
       G.aeval (fun i : Fin b × Fin b ↦
         (cyclotomicGp (j g) ^ (-k i.1)).val • j g • T⁻¹.val.uncurry i) = 0 := by

@@ -122,7 +122,7 @@ lemma mem_smoothFunctions_of_eigen [IsTopologicalGroup G] (hK : IsOpen (K : Set 
   have h_fix : ∀ᶠ k : K in nhds 1, (k : G) ∈ rightStabilizer f := by
     filter_upwards [o.out] with k (hk : χ k = 1) g
     simpa [hk] using congrFun (hf k) g
-  exact (rightStabilizer f).isOpen_of_mem_nhds (hK.isOpenMap_subtype_val.nhds_le 1 h_fix)
+  exact (rightStabilizer f).isOpen_of_mem_nhds (hK.isOpenMap_subtypeVal.nhds_le 1 h_fix)
 
 /-! ### Forms supported on one class -/
 

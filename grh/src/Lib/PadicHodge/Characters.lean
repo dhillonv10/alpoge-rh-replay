@@ -922,7 +922,7 @@ private lemma eventually_eq_one_of_isWeilPair_zero [L : PadicPlaceEmbedding E A 
     (hμ : Continuous μ) (hfin : (μ '' inertiaGroup Gal(Ω/E) A).Finite) :
     ∀ᶠ s : decompGroup Gal(Ω/E) A in nhds 1,
       IsWeilPair (L.toGp s) 0 → μ.domRestrict (decompGroup Gal(Ω/E) A) s = 1 :=
-  (continuousAt_subtype_val.eventually (eventually_eq_one_of_finite_image_inertia hμ hfin)).mono
+  (continuousAt_subtypeVal.eventually (eventually_eq_one_of_finite_image_inertia hμ hfin)).mono
     fun _ hs h_pair ↦ hs (L.isWeilPair_zero_iff.1 h_pair)
 
 /-- If a continuous ℓ-adic character μ has finite image on the inertia group of A, then the
