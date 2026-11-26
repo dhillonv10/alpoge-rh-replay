@@ -168,7 +168,7 @@ lemma norm_selfDualAddChar (z : 𝔸f E) : ‖selfDualAddChar E z‖ = 1 := norm
 
 @[fun_prop]
 lemma continuous_selfDualAddChar : Continuous (selfDualAddChar E) :=
-  continuous_ψf.subtype_val.comp (continuous_const_mul _)
+  continuous_ψf.subtypeVal.comp (continuous_const_mul _)
 
 /-- Let E be a CM field with Weil data (ȷ = −ȷ̄, finite idele α). Let ψ₀ = `selfDualAddChar E` be
 the complex character z ↦ ψ_f(ȷαᾱz) of the finite adeles. Then ψ₀(z̄) = ψ₀(−z) for every finite

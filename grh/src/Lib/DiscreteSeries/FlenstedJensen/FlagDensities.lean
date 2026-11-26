@@ -482,7 +482,7 @@ lemma integrable_mul_left_of_isFlagDensity (ho : o.Injective) (ε : n → ℤˣ)
   have h_norm : IsFlagDensity o fun y : Matrix n n ℂ ↦ ‖F y‖ :=
     fun y b hb ↦ by simp [hF_density y b hb]
   have int_K : Integrable fun k : USign (1 : n → ℤˣ) ↦ F k :=
-    DiscreteSeries.integrable_of_compactSpace (hF_cont.comp' continuous_subtype_val)
+    DiscreteSeries.integrable_of_compactSpace (hF_cont.comp' continuous_subtypeVal)
   refine ⟨(hF_cont.comp' (f := fun g : USign ε ↦ x * g) (by fun_prop)).aestronglyMeasurable, ?_⟩
   simpa [HasFiniteIntegral, ← ofReal_norm, lintegral_mul_left_eq_setLIntegral_openOrbit ho ε h_norm]
     using int_K.restrict.hasFiniteIntegral
@@ -496,7 +496,7 @@ lemma integral_mul_left_eq_setIntegral_openOrbit (ho : o.Injective) (ε : n → 
     ∫ g : USign ε, F (x * g) =
       ∫ k in {k : USign (1 : n → ℤˣ) | (x : Matrix n n ℂ)⁻¹ * k ∈ openOrbit ε o}, F k := by
   have int_K : Integrable fun k : USign (1 : n → ℤˣ) ↦ F k :=
-    DiscreteSeries.integrable_of_compactSpace (hF_cont.comp' continuous_subtype_val)
+    DiscreteSeries.integrable_of_compactSpace (hF_cont.comp' continuous_subtypeVal)
   have int_G := integrable_mul_left_of_isFlagDensity ho ε hF_density hF_cont x
   -- Test against real linear forms `φ`, and split `φ ∘ F` into its positive and negative parts.
   refine (SeparatingDual.eq_iff_forall_dual_eq (R := ℝ)).2 fun φ ↦ ?_

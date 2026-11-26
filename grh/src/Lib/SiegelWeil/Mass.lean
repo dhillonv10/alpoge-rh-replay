@@ -318,7 +318,7 @@ lemma gauss_sum_sq_le [Fintype n] (b : selfAdjoint (𝔸f E)) (Γ : 𝔸f E) :
   -- Weyl differencing: the squared modulus of `∫ F` is the integral of the autocorrelation `corr`.
   let L : Set (n → 𝔸f E) := ↑(stdLattice E n)
   let F (w : n → 𝔸f E) : ℂ := ψf E ((2⁻¹ : E) * (b.1 * (star w ⬝ᵥ w - Γ)))
-  have F_cont : Continuous F := continuous_ψf.subtype_val.comp (by fun_prop)
+  have F_cont : Continuous F := continuous_ψf.subtypeVal.comp (by fun_prop)
   let corr (d : n → 𝔸f E) : ℂ := ∫ w in L, starRingEnd ℂ (F w) * F (w + d)
   -- Translating `w` by `star v` in the entry `i` multiplies `corr d` by `ψf E (b * d i * v)`
   -- and keeps `L`; so `corr d = 0` unless all `d i` are in `K`.

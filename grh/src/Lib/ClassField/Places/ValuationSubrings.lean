@@ -502,7 +502,7 @@ lemma exists_placeOfEmb_extension :
   have hφ_norm : ∀ y : LocField (placeOfEmb σ), ‖(φ y : F)‖ = ‖y‖ ^ c :=
     h_dense.eq (fun x ↦ (congrArg norm (hφ_ext x)).trans (congrFun h_pow x).symm) hφ_cont.norm
       (continuous_norm.rpow_const fun _ ↦ .inr hc_pos.le)
-  refine ⟨(algebraMap L F).comp φ, continuous_subtype_val.comp hφ_cont, hφ_ext,
+  refine ⟨(algebraMap L F).comp φ, continuous_subtypeVal.comp hφ_cont, hφ_ext,
     fun x ↦ (φ x).prop, fun x y ↦ ?_⟩
   -- `‖φ x‖ ≤ ‖φ y‖` holds iff `‖x‖ ^ c ≤ ‖y‖ ^ c`, iff `‖x‖ ≤ ‖y‖`, iff `v x ≤ v y`.
   simp [← coe_le_coe, hφ_norm, Real.rpow_le_rpow_iff, hc_pos, Valued.toNormedField.norm_le_iff]

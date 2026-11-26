@@ -513,7 +513,7 @@ lemma IntegralPlace.setIntegral_eq_slab (hJ : Jᴴ = J) (hψ : ∀ x : A, P.ψ (
   let M : AddSubgroup (skewAdjoint A) :=
     P.integers.toAddSubgroup.comap ((AddMonoidHom.mulLeft u.1).comp (skewAdjoint A).subtype)
   have M_open : IsOpen (M : Set (skewAdjoint A)) :=
-    isOpen_O.preimage (continuous_subtype_val.const_mul _)
+    isOpen_O.preimage (continuous_subtypeVal.const_mul _)
   have coe_M : (M : Set (skewAdjoint A)) = {b : skewAdjoint A | u.1 * b.1 ∈ O} := rfl
   have M_fin : P.skewMeasure M ≠ ∞ := by simp [coe_M, P.skewMeasure_setOf_mul_mem u hu]
   have : IsFiniteMeasure (P.skewMeasure.restrict M) := isFiniteMeasure_restrict.2 M_fin

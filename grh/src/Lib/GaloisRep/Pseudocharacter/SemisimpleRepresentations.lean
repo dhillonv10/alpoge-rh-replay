@@ -623,7 +623,7 @@ lemma eventually_exists_isLatticeIn [TopologicalSpace G] [IsTopologicalGroup G] 
   have hZ_closed (m : ∀ p, I p) : IsClosed (Z m) := isClosed_iInter fun p ↦
     -- `O (m p)` is compact, hence closed; `Z m` is an intersection of preimages of it
     .preimage (hs_cont p) <| by
-      simpa using (isCompact_range (X := O (m p)) continuous_subtype_val).isClosed
+      simpa using (isCompact_range (X := O (m p)) continuous_subtypeVal).isClosed
   have hZ_cover : ⋃ m, Z m = univ := by
     refine eq_univ_of_forall fun g ↦ ?_
     choose m hm hg using h_gen g

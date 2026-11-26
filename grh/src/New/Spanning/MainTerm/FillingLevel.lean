@@ -432,7 +432,7 @@ theorem exists_integralPlace : ∃ P : IntegralPlace (LocProd T), P.ψ = S.charO
       modulus := modulus
       ψ := S.charOnPlaces T
       kernelBound := 1
-      continuous_psi := continuous_ψf.subtype_val.comp ((continuous_adeleOfLocal T).const_mul _)
+      continuous_psi := continuous_ψf.subtypeVal.comp ((continuous_adeleOfLocal T).const_mul _)
       measurable_modulus := by
         simp [modulus, genIndex_eq_inv_prod_norm]
         fun_prop

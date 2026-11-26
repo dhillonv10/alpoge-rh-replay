@@ -188,7 +188,7 @@ def adelicHeisenberg : Heisenberg (n → 𝔸 E) where
     rw [← stdAddChar_inv_two_mul_add_star]
     simp [neg_div, ← star_dotProduct, star_mulVec_dotProduct]
   norm_eq_one := by simp [Circle.norm_coe]
-  cont := Continuous.subtype_val (by fun_prop)
+  cont := Continuous.subtypeVal (by fun_prop)
 
 end AdelicHeisenberg
 

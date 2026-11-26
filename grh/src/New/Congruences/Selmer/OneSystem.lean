@@ -291,7 +291,7 @@ lemma exists_openNormalSubgroup_forall_eq_zero (G' : OpenSubgroup Gal(Ω/E)) (m 
   -- The homomorphisms `χ : B → ℤ / m` separate the points of `B`, and `χ ∘ z` lies in `Y`.
   refine eq_zero_of_forall_hom_zmod_eq_zero hm fun χ ↦ ?_
   have h_cocycle : (fun u : H ↦ χ (z u)) ∈ Z1 V.ρ := by
-    refine ⟨(hz_const.comp χ).continuous.comp continuous_subtype_val, fun u u' ↦ ?_⟩
+    refine ⟨(hz_const.comp χ).continuous.comp continuous_subtypeVal, fun u u' ↦ ?_⟩
     simp [V, hz_add u u.property u' u'.property]
   have h_mem : (fun u : H ↦ χ (z u)) ∈ Y := by
     refine ⟨h_cocycle, fun w hw A hA u hu ↦ ?_⟩

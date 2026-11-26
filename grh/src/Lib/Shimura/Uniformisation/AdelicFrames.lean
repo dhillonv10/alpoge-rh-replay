@@ -494,7 +494,7 @@ instance : DiscreteTopology (classLattice g ⊥ Q) := by
   -- A compact set `K` holds finitely many lattice points: they come from rational vectors in the
   -- compact adelic set `Q⁻¹ K × g Ô ^ n`, and the rational vectors form a lattice
   -- (`isCovolOneLattice_ratVectors`).
-  refine continuous_subtype_val.discrete_of_tendsto_cofinite_cocompact
+  refine continuous_subtypeVal.discrete_of_tendsto_cofinite_cocompact
     (tendsto_cofinite_cocompact_iff.mpr fun K hK ↦ ?_)
   let f (p : V × (n → 𝔸f E)) (i : n) : (InfinitePlace E → ℂ) × 𝔸f E :=
     (Q.symm p.fst i, ((g : Matrix n n (𝔸f E)) *ᵥ p.snd) i)

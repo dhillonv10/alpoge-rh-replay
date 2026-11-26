@@ -198,7 +198,7 @@ theorem finite_cocycles_unramified_outside (V : DiscreteModule R G) [Finite V]
   have h_dec (w : T) (u : decompGroup U (placeOver w.1)) : z u = 0 :=
     congrFun (congrFun (congrArg Prod.snd h_res) w) u
   have h_hom : (fun u : U ↦ z u) ∈ Z1 (.trivial ℤ U V) :=
-    ⟨hz_cont.comp continuous_subtype_val, fun u u' ↦ by simp [hz_mul, h_act]⟩
+    ⟨hz_cont.comp continuous_subtypeVal, fun u u' ↦ by simp [hz_mul, h_act]⟩
   -- A continuous homomorphism on `U` that kills complex conjugations, the decomposition groups at
   -- `T` and the inertia groups outside `T` is zero.
   have h_zero : ∀ u : U, z u = 0 := by

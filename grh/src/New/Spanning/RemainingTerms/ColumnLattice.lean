@@ -133,7 +133,7 @@ instance {S : Filling E 𝔰} {c : S.Classes} [HasPrimitiveRoot5040 E] [S.IsAdmi
     isOpen_lt (by fun_prop) continuous_const
   suffices h_zero : ({0} : Set (S.columnLattice ι c)) = Subtype.val ⁻¹' U by
     rw [h_zero]
-    exact hU.preimage continuous_subtype_val
+    exact hU.preimage continuous_subtypeVal
   ext ⟨x, hx⟩
   obtain ⟨q, hq, rfl⟩ := mem_columnLattice.1 hx
   refine ⟨fun h_eq ↦ ?_, fun h_short ↦ Subtype.ext ?_⟩

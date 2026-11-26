@@ -89,7 +89,7 @@ theorem U.continuous_mat : Continuous fun g : U J ↦ (g.val.val : Matrix n n �
 theorem continuous_expU [IsHermitianInvolution J] : Continuous (expU (J := J)) := by
   -- The topology of `U J` is induced from the matrices, where `exp` is continuous.
   let : NormedAlgebra ℚ (Matrix n n ℂ) := .restrictScalars ℚ ℂ _
-  exact continuous_U_iff_matrix.2 (exp_continuous.comp continuous_subtype_val)
+  exact continuous_U_iff_matrix.2 (exp_continuous.comp continuous_subtypeVal)
 
 /-- For `g` in the unitary group `U J` and `Y` in its Lie algebra, the matrix of the curve
 `s ↦ g exp(s Y)` has derivative `g exp(t Y) Y` at `t`. -/

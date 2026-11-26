@@ -90,7 +90,7 @@ lemma charOnPlaces_evalPlaces {x : 𝔸f E} (hx : x ∈ integralOff T) :
   exact S.selfDualChar_eq_one_of_mem _ ((sub_adeleOfLocal_mem_iff T).2 hx)
 
 lemma continuous_charOnPlaces : Continuous (S.charOnPlaces T) :=
-  continuous_ψf.subtype_val.comp ((continuous_adeleOfLocal T).const_mul _)
+  continuous_ψf.subtypeVal.comp ((continuous_adeleOfLocal T).const_mul _)
 
 /-- The character of the product of the infinite places and the completions at `T`: the product of
 the characters `wave c = exp (c - conj c)` at the infinite places and of `S.charOnPlaces T`. -/

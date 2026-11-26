@@ -276,7 +276,7 @@ lemma mem_levelGU_of_map_evalAt_eq {g : GL n (𝔸f E)} (hGU : g ∈ GU E n) (hi
 lemma isOpen_comap_conjAtSplit (h𝔑 : 𝔑 ≠ 0) :
     IsOpen ((levelGU n 𝔑).comap (conjAtSplit w)).carrier := by
   have h_cont : Continuous (conjAtSplit (n := n) w) := .of_coeHom_comp
-    (Units.continuous_coe_inv.comp (continuous_ofSplitPlace w.2).subtype_val).matrix_transpose
+    (Units.continuous_coe_inv.comp (continuous_ofSplitPlace w.2).subtypeVal).matrix_transpose
   exact .and (by simp) ((isOpen_congruenceGL_span h𝔑).preimage h_cont)
 
 /-- Let w be split with 𝔑 ∉ w̄, and let κ ∈ K(𝔑). Then `conjAtSplit w (dualComponent w κ)`, the

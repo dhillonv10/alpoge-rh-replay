@@ -329,7 +329,7 @@ lemma exists_unit_on_roots_of_unity (φ : O →+* ℂ) :
     {p : 𝔸f ℚ × 𝔸f ℚ |
       φ (ζ (ψf E t)) = ψf E (t * ι p.fst) ∧ ψf E (t * ι (p.fst * p.snd)) = ψf E t}
   have hC_closed (t : 𝔸f E) : IsClosed (C t) := by
-    apply (isClosed_eq _ (.subtype_val _)).and (isClosed_eq ..) <;> fun_prop
+    apply (isClosed_eq _ (.subtypeVal _)).and (isClosed_eq ..) <;> fun_prop
   have h_fin (U : Finset (𝔸f E)) : ((Ô ℚ : Set _) ×ˢ (Ô ℚ : Set _) ∩ ⋂ t ∈ U, C t).Nonempty := by
     -- All `ψf E t`, `t ∈ U`, are `N`-th roots of unity.
     obtain ⟨N, hN, hU⟩ := exists_forall_mul_mem_Ô fun t : U ↦ (t : 𝔸f E)

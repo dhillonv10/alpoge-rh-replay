@@ -460,7 +460,7 @@ lemma TameChart.linearFrob_eq_one (d : TameChart Γ) (h_bij : Bijective Γ.overG
       map_mul' g g' := by simpa using linearFrob_mul hY (weil g) (weil g') }
   have ker_open : β.ker.IsOpen := by
     refine β.ker.isOpen_of_mem_nhds (g := 1) ?_
-    filter_upwards [continuous_subtype_val.tendsto 1
+    filter_upwards [continuous_subtypeVal.tendsto 1
       (mem_comap'.1 hY.eventually_linearFrob_eq_one)] with g hg using hg (toGp_symm g) (weil g)
   have β_pow (g : inertiaGroup (Gp p) (intQpBar p)) : β g ^ d.e = 1 := by
     simpa [β, sub_eq_zero] using (h_killed _ (weil g)).2

@@ -209,7 +209,7 @@ lemma normDensity_indicator_eq_mul [WeilData E] (hψ : P.ψ = S.charOnPlaces T) 
   rw [normDensity]
   refine integral_eq_mul_of_section P.skewMeasure (by fun_prop) (by fun_prop)
     localFrequency_adelicFrequency_add
-    (SemilocalField.isOpen_O.preimage continuous_subtype_val).measurableSet skew_vol fun b z hz ↦ ?_
+    (SemilocalField.isOpen_O.preimage continuous_subtypeVal).measurableSet skew_vol fun b z hz ↦ ?_
   rw [integral_withDensity_eq_integral_smul (.indicator (by fun_prop) L_meas), lattice_eq,
     ← setIntegral_indicator L_meas]
   -- the vector: `adeleOfLocal T` is a section of `evalPlaces T`

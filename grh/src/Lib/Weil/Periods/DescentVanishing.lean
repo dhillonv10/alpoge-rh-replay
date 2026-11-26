@@ -788,7 +788,7 @@ lemma DescentsVanish.integral_frameChar_mul_blockPeriod_eq_zero {T : Set (FinPla
   obtain ⟨F_int, F_zero⟩ : Integrable F ν ∧ ∫ g, F g ∂ν = 0 :=
     hkill.integral_frameChar_eq_zero o hs hY_cont hY_inv h₁ u
   have F_cont : Continuous F :=
-    (continuous_subtype_val.comp <| (continuous_apply u).comp <|
+    (continuous_subtypeVal.comp <| (continuous_apply u).comp <|
       (continuous_frameChar T).comp (by fun_prop)).mul (by fun_prop)
   have F_inv : ((stdSpace E n₂).Γ.map (secondBlock o hs)).FixesLeft F := by
     rintro _ ⟨v, hv, rfl⟩ g

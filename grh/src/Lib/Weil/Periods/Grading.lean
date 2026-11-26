@@ -760,8 +760,8 @@ variable {ε : n → ℤˣ} {A : ℕ} {J : Matrix n n ℂ}
 `New.DiscreteSeries.SignFrame J ε`, so that pᴴJp = diag(ε). -/
 def DiscreteSeries.frameEquiv : U J ≃ₜ* USign ε :=
   ContinuousMulEquiv.mk (U.conj p.matrix p.gram_eq).symm
-    (continuous_induced_rng.2 ((continuous_const.mul continuous_subtype_val).mul continuous_const))
-    (continuous_induced_rng.2 ((continuous_const.mul continuous_subtype_val).mul continuous_const))
+    (continuous_induced_rng.2 ((continuous_const.mul continuous_subtypeVal).mul continuous_const))
+    (continuous_induced_rng.2 ((continuous_const.mul continuous_subtypeVal).mul continuous_const))
 
 /-- The function g ↦ c_λ(p⁻¹gp) on U(J), for l = 2λ and the frame p of
 `New.DiscreteSeries.SignFrame J ε`, so that pᴴJp = diag(ε). -/

@@ -425,7 +425,7 @@ lemma orbital_eq_char_sub_offOrbitIntegral (hg : l.HasGap h) :
     MonoidHom.measurePreserving (by fun_prop) (by simp [mem_maxCompactU, Function.Surjective])
       (by simp)
   have K_eq_U : ∫ k : maxCompactU (1 : n → ℤˣ), F k ∂haarK 1 = ∫ k : USign (1 : n → ℤˣ), F k :=
-    h_meas.hasLaw.integral_comp (F_cont.comp continuous_subtype_val).aestronglyMeasurable
+    h_meas.hasLaw.integral_comp (F_cont.comp continuous_subtypeVal).aestronglyMeasurable
   rw [sign_mul_orbital_eq_integral_weightMinors_div hg x hx F_int,
     kTypeNormSq_mul_kTypeChar_eq_integral hg x hx, F_orbit, K_eq_U]
 

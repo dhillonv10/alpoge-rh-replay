@@ -326,7 +326,7 @@ lemma artin_reciprocity_of_mem_component {a : ℕ} (ha : l.Coprime a) (ha_one : 
     simpa [split, ← (conj_over u).ordRat_smul (s u)] using (hw u).ordRat_ofBase (Γ := G) y
   have h_lc : IsLocallyConstant fun g : Gal(Ω/ℚ) ↦ lam (d • x g) :=
     (isLocallyConstant_of_mem_vanishingCocycles hx).comp fun z ↦ lam (d • z)
-  let χ : QZChar G := ⟨fun g ↦ lam (d • x g), h_lc.continuous.comp continuous_subtype_val,
+  let χ : QZChar G := ⟨fun g ↦ lam (d • x g), h_lc.continuous.comp continuous_subtypeVal,
     fun g h ↦ by simp [apply_mul_of_mem_vanishingCocycles hx,
       cyclotomicPowDirichlet_smul_eq_self g.prop, hx_tors]⟩
   have torsion : m • χ = 0 := by
@@ -386,7 +386,7 @@ private lemma exists_apply_eq_galUnitsRep_sub {κ : Gal(Ω/ℚ) → M} {s : Set 
     (hκ_tors : ∀ g : Gal(Ω/ℚ), l • κ g = 0) (L : M →+ DiscreteUnits Ω) :
     ∃ r : DiscreteUnits Ω, ∀ g : cycloGalGroup (N * l), L (κ g) = galUnitsRep g r - r := by
   have h_lc : IsLocallyConstant (L ∘ κ) := (isLocallyConstant_of_mem_vanishingCocycles hκ).comp L
-  refine hilbert90_unitsRep ⟨_, h_lc.continuous.comp continuous_subtype_val, fun g h ↦ ?_⟩
+  refine hilbert90_unitsRep ⟨_, h_lc.continuous.comp continuous_subtypeVal, fun g h ↦ ?_⟩
   -- `g` fixes the root of unity `L (κ h)` and acts trivially on `κ h`.
   show L (κ (g * h)) = L (κ g) + unitsRep (g : Gal(Ω/ℚ)) (L (κ h))
   rw [cyclotomicCharMod_eq_one_iff.1 g.2]

@@ -88,7 +88,7 @@ instance {E : Type*} [Field E] [CMType E] (W : Space E n 1) : DiscreteTopology W
     (.cocompact (Gf E n)) := by
     simpa [← Filter.coprod_cocompact, Function.comp_def] using h_emb
   -- `W.Γf` is the range of `W.embFin γ = (W.ratEmbed γ).2`.
-  refine continuous_subtype_val.discrete_of_tendsto_cofinite_cocompact
+  refine continuous_subtypeVal.discrete_of_tendsto_cofinite_cocompact
     (.mono_left ?_ (Set.rangeFactorization_surjective (f := W.embFin)).le_map_cofinite)
   exact h_fin
 

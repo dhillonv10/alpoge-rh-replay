@@ -290,7 +290,7 @@ as scalar matrices in `U(1)` (`scalarFin`), is continuous. -/
 lemma New.continuous_scalarFin_divStar :
     Continuous fun x : (𝔸f E)ˣ ↦ scalarFin (Fin 1) (divStar x) :=
   (U.isClosedEmbedding_coe isUnit_one).continuous_iff.2 <|
-    .matrix_diagonal (continuous_pi fun _ ↦ continuous_subtype_val.comp divStar.continuous)
+    .matrix_diagonal (continuous_pi fun _ ↦ continuous_subtypeVal.comp divStar.continuous)
 
 /-- At a split place `w`, the element `x / star x` of `U(1)` for the idele with component `x` at `w`
 and `1` elsewhere is the scalar matrix `x` embedded at `w`. -/
