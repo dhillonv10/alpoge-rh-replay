@@ -346,7 +346,7 @@ lemma hasSum_invDFT_mul_gaussianMonomial (Φ : ZMod q → ℂ) {S : ZMod q → �
       (I ^ j.val * t * ∑ a : ZMod q, Φ a * S a) := by
   have h_char (a : ZMod q) (n : ℤ) :
       stdAddChar (a * (n : ZMod q)) = cexp (2 * π * I * (a.val / q : ℝ) * n) := by
-    rw [← zsmul_eq_mul', AddChar.map_zsmul_eq_zpow, stdAddChar_apply, toCircle_apply, ← exp_intCast_mul]
+    rw [← zsmul_eq_mul', AddChar.map_zsmul_eq_zpow, stdAddChar_apply, toCircle_apply, ← Complex.exp_intCast_mul]
     push_cast
     ring_nf
   have h_value : (∑ a : ZMod q, Φ a * (I ^ j.val * (q * t : ℝ) * S a)) / q =
